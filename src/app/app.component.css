@@ -1,0 +1,61 @@
+/*#app {*/
+/*  display: grid;*/
+/*  width: 100%;*/
+/*  height: 200px;*/
+/*  grid-template: [header-left] "head head" 30px [header-right]*/
+/*                 [main-left]   "nav  main" 1fr  [main-right]*/
+/*                 [footer-left] "nav  foot" 30px [footer-right]*/
+/*                 / 120px 1fr;*/
+/*}*/
+
+/*header {*/
+/*  grid-area: head;*/
+/*}*/
+
+/*nav {*/
+/*  background-color: lightblue;*/
+/*  grid-area: nav;*/
+/*}*/
+
+/*main {*/
+/*  background-color: yellow;*/
+/*  grid-area: main;*/
+/*}*/
+
+/*footer {*/
+/*  background-color: red;*/
+/*  grid-column: foot;*/
+/*}*/
+#divPrincipale {
+  display : grid;
+  grid-template-areas:  "title title"
+                        "personnes zoneMessages"
+                        "personnes nouveauMessages";
+  grid-template-columns: 20% 80%;
+}
+
+app-entete {
+  grid-area : title;
+}
+
+app-personnes-actives {
+  grid-area: personnes;
+  border : black solid 2px;
+}
+
+app-zone-des-messages {
+  grid-area: zoneMessages;
+  border : black solid 2px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  overflow: auto;
+}
+
+app-nouveau-messages {
+  grid-area: nouveauMessages;
+  border : black solid 2px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+
